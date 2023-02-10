@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    background-color: #0474bb;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenes_camisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img{
+    width: 320px;
+    height: 401px;
+}
+
+h4{
+    padding-left: 90px;
+    background-color: #0474bb;
+    color: #fff;
+}
+
+label{
+    font-weight: bold;
+}
+
+.formulario_envio{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.camisa_Uno, .camisa_Dos{
+    cursor:pointer;
+    transition: transform 0.5s;
+}
+
+.camisa_Uno:hover{
+    transform: scale(1.2);
+}
+
+.camisa_Dos:hover{
+    transform: scale(1.2);
+}
+
+.button{
+    background-color: transparent;
+    font-weight: bold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc
+    -.5rem -.5rem 1rem #fff;
+}
+
+.button:hover{
+    box-shadow: .5rem .5rem 1rem #fff
+         -.5rem -.5rem 1rem #ccc;
+}
+
+.button:active{
+    box-shadow: inset .2rem .2rem 1rem #fff
+        inset  -.2rem -.2rem 1rem #ccc;
+}
