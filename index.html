@@ -24,10 +24,13 @@
    <section class="formulario_envio">
     <form>
         <label>Nombre Completo: </label>
-        <input type="text" name="Nombre" />
+        <input type="text" name="Nombre" id="nombre" />
         <br/><br/>
         <label>Direccion: </label>
-        <input type="text" name="Direccion" />
+        <input type="text" name="Direccion" id ="direccion" />
+        <br/><br/>
+        <label>Email: </label>
+        <input type="email" name="Email" id="email" />
         <br/><br/>
         <label>Nombre de camisa: </label>
         <select>
@@ -59,10 +62,17 @@
             <option value="addidas">Addidas</option>
         </select>
         <br/><br/>
-        <input type="submit" value="Enviar" class="button" />
+        <input type="submit" value="Enviar" class="button" onclick="enviarFormulario()" />
     </form>
    </section> 
     
+   <script>
+    function enviarFormulario() {
+        let nombre = document.getElementById("nombre").value;
+        let email = document.getElementById("email").value;
+        alert("Nombre: " + nombre + "\nCorreo electrónico: " + email);
+    }
+   </script>
 
 </body>
 </html>
