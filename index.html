@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,68 +11,72 @@
     <header>
         <h1>Camisetas 2023</h1>
     </header>
-    <section class="imagenes_camisa">
-        <div class="camisa_Uno">
-            <img src="assets/camisaUno.png" />
-            <h4>Gildan 2000 Ultra Cotton</h4>
-        </div>
-        <div class="camisa_Dos">
-            <img src="assets/camisa_2.jpg"/> 
-            <h4>Gildan 2400 Ultra Cotton</h4>
-        </div>
-    </section>
-   <section class="formulario_envio">
-    <form>
-        <label>Nombre Completo: </label>
-        <input type="text" name="Nombre" id="nombre" />
-        <br/><br/>
-        <label>Direccion: </label>
-        <input type="text" name="Direccion" id ="direccion" />
-        <br/><br/>
-        <label>Email: </label>
-        <input type="email" name="Email" id="email" />
-        <br/><br/>
-        <label>Nombre de camisa: </label>
-        <select>
-            <option value="">Selecciona aquí...</option>
-            <option value="gildan 2000">Gildan 2000 Ultra Cotton</option>
-            <option value="gildan 2400">Gildan 2400 Ultra Cotton</option>
-        </select>
-        <br/><br/>
-        <label>Tamaño: </label>
-        <select>
-            <option value="pequeña">Pequeña (S)</option>
-            <option value="mediana">Mediana (M)</option>
-            <option value="grande">Grande (L)</option>
-        </select>
-        <br/><br/>
-        <label>Color: </label>
-        <select>
-            <option value="blanco">Blanco</option>
-            <option value="azul">Azul</option>
-            <option value="negro">Negro</option>
-        </select>
-        <br/><br/>
-        <label>Cantidad: </label>
-        <input type="number" name="Cantidad">
-        <br/><br/>
-        <label>Logotipo: </label>
-        <select>
-            <option value="nike">Nike</option>
-            <option value="addidas">Addidas</option>
-        </select>
-        <br/><br/>
-        <input type="submit" value="Enviar" class="button" onclick="enviarFormulario()" />
-    </form>
-   </section> 
-    
-   <script>
-    function enviarFormulario() {
-        let nombre = document.getElementById("nombre").value;
-        let email = document.getElementById("email").value;
-        alert("Nombre: " + nombre + "\nCorreo electrónico: " + email);
-    }
-   </script>
-
-</body>
-</html>
+    <div class="contenedor">
+        <form action="">
+            <div class="contenedor_intro">
+                <h1>Ingresa tu pedido aquí:</h1>
+                <h3>Selecciona la camisa de tu preferencia: </h3>
+            </div>
+            <div class="camisa_seleccion">
+                <div class="camisa--Uno">
+                    <label><h4>Gildan 2000 Ultra Cotton</h4></label>
+                    <input type="radio" name="logo" class="input__camisa" checked>
+                    <img src="assets/camisaUno.png" alt="CamisaMangaCorta" class="camisa--Uno--img" />
+                </div>
+                <div class="camisa--Dos">
+                    <label><h4>Gildan 2400 Ultra Cotton</h4></label>
+                    <input type="radio" name="logo" class="input__camisa" />
+                    <img src="assets/camisa_2.jpg" alt="CamisaMangaLarga" class="camisa--Dos--img" /> 
+                    <h4></h4>
+                </div>
+            </div>
+            <div class="datos_seleccion">
+                <div class="datos--tamaño">
+                    <label>Tamaño: </label>
+                        <select>
+                            <option value="select">Selecciona una opción...</option>
+                            <option value="pequeña">Pequeña (S)</option>
+                            <option value="mediana">Mediana (M)</option>
+                            <option value="grande">Grande (L)</option>
+                    </select>
+                </div>
+                <div class="datos--color">
+                    <label>Color: </label>
+                        <select>
+                            <option value="select">Selecciona una opción...</option>
+                            <option value="blanco">Blanco</option>
+                            <option value="azul">Azul</option>
+                            <option value="negro">Negro</option>
+                        </select>
+                </div>
+                <div class="datos--logo">
+                    <label>Logotipo: </label>
+                        <select>
+                            <option value="select">Selecciona una opción...</option>
+                            <option value="nike">Nike</option>
+                            <option value="addidas">Addidas</option>
+                        </select>
+                </div>
+            </div>
+            <div class="datos__envio">
+                <h3>Ingresa tus datos de envío: </h3>
+                <div class="datosCliente">
+                    <div class="cliente--nombre">
+                        <label>Nombre Completo: </label>
+                        <input type="text" name="Nombre" id="nombre" />
+                    </div>
+                    <div class="cliente--direccion">
+                        <label>Direccion: </label>
+                        <input type="text" name="Direccion" id ="direccion" />
+                    </div>
+                    <div class="cliente--email">
+                        <label>Email: </label>
+                        <input type="email" name="Email" id="email" />
+                    </div>
+                </div>
+            </div>
+            <div class="enviar__pedido">
+                <input type="submit" value="Enviar Pedido" class="button" onclick="enviarFormulario()" />
+            </div>
+        </form>
+    </div>

@@ -1,57 +1,75 @@
+
+html{
+    height: 100%;
+}
 body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 header{
     display: flex;
     background-color: #0474bb;
     color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    align-items: center;
     justify-content: center;
 }
 
-.imagenes_camisa{
+/*Formulario*/
+
+.contenedor_intro{
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.camisa_seleccion{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
 img{
     width: 320px;
     height: 401px;
 }
 
-h4{
-    padding-left: 90px;
-    background-color: #0474bb;
-    color: #fff;
+.camisa--Uno, .camisa--Dos{
+    text-align: center;
+    cursor: pointer;
 }
 
-label{
-    font-weight: bold;
-}
+/*Selector de Datos*/
 
-.formulario_envio{
-    padding-top: 50px;
+.datos_seleccion{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.datos__envio h3{
+    text-align: center;
+}
+
+.datosCliente{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/*Enviar pedido*/
+
+.enviar__pedido{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-content: center;
-}
-
-.camisa_Uno, .camisa_Dos{
-    cursor:pointer;
-    transition: transform 0.5s;
-}
-
-.camisa_Uno:hover{
-    transform: scale(1.2);
-}
-
-.camisa_Dos:hover{
-    transform: scale(1.2);
 }
 
 .button{
@@ -77,3 +95,5 @@ label{
     box-shadow: inset .2rem .2rem 1rem #fff
         inset  -.2rem -.2rem 1rem #ccc;
 }
+
+
